@@ -10,7 +10,7 @@ def send_email(form_data, page_name):
              f"Повідомлення: {form_data['message']}",
         from_email="golden.gruz.sender@gmail.com",
         to=[
-            "www.vladik49@gmail.com"
+            "goldengruz534@gmail.com"
         ],
     )
 
