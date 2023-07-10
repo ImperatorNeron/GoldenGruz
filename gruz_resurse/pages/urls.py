@@ -11,7 +11,8 @@ from pages.views import (
     SemiTrailersAttentionView,
     ProductView,
     TrucksView,
-    AboutUsView
+    AboutUsView,
+    GoogleVerification
 )
 
 urlpatterns = [
@@ -43,4 +44,5 @@ urlpatterns = [
     path("product/", ProductView.as_view(), name="product"),
     path("trucks/", TrucksView.as_view(), name="trucks"),
     path("about-us/", AboutUsView.as_view(), name="about"),
+    path("google38a66c0f5b25b022.html", GoogleVerification.as_view()),
 ]

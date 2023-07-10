@@ -117,3 +117,7 @@ class AboutUsView(TemplateView):
     """View the main page"""
 
     template_name = "pages/about-us.html"
+
+
+class GoogleVerification(TemplateView):
+    template_name = "pages/google38a66c0f5b25b022.html"
