@@ -121,3 +121,8 @@ class AboutUsView(TemplateView):
 
 class GoogleVerification(TemplateView):
     template_name = "pages/google38a66c0f5b25b022.html"
+
+
+class SiteMapView(TemplateView):
+    template_name = 'pages/sitemap.xml'
+    content_type = 'application/xml'
