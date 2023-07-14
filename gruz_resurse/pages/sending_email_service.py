@@ -1,19 +1,29 @@
 from django.core.mail import EmailMessage
 
 
-def send_email(form_data, page_name):
+def send_email(form_data):
     email = EmailMessage(
-        subject=f'Нове повідомлення зі сторінки "{page_name}"',
-        body=f"Ім'я відправника: {form_data['name']}\n"
-             f"Номер телефону: {form_data['phone_number']}\n"
-             f"Email: {form_data['email']}\n"
-             f"Повідомлення: {form_data['message']}",
+        subject=f"Повідомлення від користувача на ім'я {form_data['name']}",
+        body=f"Номер телефону: {form_data['phone_number']}\n"
+        f"Email: {form_data['email']}\n"
+        f"Повідомлення: {form_data['message']}",
         from_email="golden.gruz.sender@gmail.com",
-        to=[
-            "goldengruz534@gmail.com"
-        ],
+        to=["goldengruz534@gmail.com"],
     )
 
-    for photo in form_data['photos']:
+    for photo in form_data["photos"]:
         email.attach(photo.name, photo.read(), photo.content_type)
+    email.send()
+
+
+def send_feedback_email(form_data):
+    email = EmailMessage(
+        subject=f"Повідомлення від користувача на ім'я {form_data['name']}",
+        body=f"Зателефонуйте мені в період між {form_data['time_range_1'] // 60 + 8}:00 "
+        f"і {form_data['time_range_2'] // 60 + 8}:00\n"
+        f"Номер телефону: {form_data['phone_number']}\n"
+        f"Email: {form_data['email'] if form_data['email'] else 'Не вказана користувачем'}\n",
+        from_email="golden.gruz.sender@gmail.com",
+        to=["goldengruz534@gmail.com"],
+    )
     email.send()

@@ -1,4 +1,11 @@
 {% load static %}
-<a class="fixed-icon" href="tel:+380951515315">
+<a class="fixed-icon first-button" href="tel:+380951515315">
     <img src="{% static 'pages/images/icons/telephone-call.png' %}" width="25" height="25">
 </a>
+<button type="button" class="fixed-icon second-button" data-bs-toggle="modal" data-bs-target="#myModal">
+    <img src="{% static 'pages/images/icons/message.png' %}" width="25" height="25">
+</button>
+<button class="fixed-icon zero-button">
+    <img class="zero-button-img-1 active" src="{% static 'pages/images/icons/phone-call.png' %}" width="25" height="25">
+    <img class="zero-button-img-2 no-active" src="{% static 'pages/images/icons/close.png' %}" width="17" height="17">
+</button>

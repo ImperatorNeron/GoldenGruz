@@ -12,7 +12,6 @@ from pages.views import (
     ProductView,
     TrucksView,
     AboutUsView,
-    GoogleVerification,
     SiteMapView
 )
 
@@ -45,6 +44,5 @@ urlpatterns = [
     path("product/", ProductView.as_view(), name="product"),
     path("trucks/", TrucksView.as_view(), name="trucks"),
     path("about-us/", AboutUsView.as_view(), name="about"),
-    path("google38a66c0f5b25b022.html", GoogleVerification.as_view()),
     path("sitemap.xml", SiteMapView.as_view()),
 ]

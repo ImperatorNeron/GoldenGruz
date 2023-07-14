@@ -1,24 +1,24 @@
-.fixed-icon{
+.no-active{
     display: none;
 }
 
-@media (max-width: 1280px) {
-    .fixed-icon {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: #b9b9b9;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 2;
-    }
-
-    .fixed-icon img {
-        filter: invert(1);
-    }
+.fixed-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #b9b9b9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    border: 0;
 }
+
+.fixed-icon img {
+    filter: invert(1);
+}
+
