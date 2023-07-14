@@ -12,7 +12,7 @@ from pages.views import (
     ProductView,
     TrucksView,
     AboutUsView,
-    SiteMapView
+    SiteMapView,
 )
 
 urlpatterns = [

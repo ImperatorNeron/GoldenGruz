@@ -88,7 +88,7 @@ class FeedbackForm(forms.Form):
                 "placeholder": "Email",
             }
         ),
-        required=False
+        required=False,
     )
     phone_number = forms.RegexField(
         regex=r"^\+?1?\d{9,15}$",
@@ -101,18 +101,28 @@ class FeedbackForm(forms.Form):
         error_messages={"invalid": "Введіть правильний номер телефону!"},
     )
     time_range_1 = forms.IntegerField(
-        widget=forms.NumberInput(attrs={'type': 'range',
-                                        'min': '0',
-                                        'max': '720',
-                                        'value': '120',
-                                        'step': '60',
-                                        'id': 'slider-1',
-                                        'oninput': 'slideOne()', }))
+        widget=forms.NumberInput(
+            attrs={
+                "type": "range",
+                "min": "0",
+                "max": "720",
+                "value": "120",
+                "step": "60",
+                "id": "slider-1",
+                "oninput": "slideOne()",
+            }
+        )
+    )
     time_range_2 = forms.IntegerField(
-        widget=forms.NumberInput(attrs={'type': 'range',
-                                        'min': '0',
-                                        'max': '720',
-                                        'value': '360',
-                                        'step': '60',
-                                        'id': 'slider-2',
-                                        'oninput': 'slideTwo()', }))
+        widget=forms.NumberInput(
+            attrs={
+                "type": "range",
+                "min": "0",
+                "max": "720",
+                "value": "360",
+                "step": "60",
+                "id": "slider-2",
+                "oninput": "slideTwo()",
+            }
+        )
+    )

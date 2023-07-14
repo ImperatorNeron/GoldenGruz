@@ -56,21 +56,29 @@ class BaseContactFeedbackFormsView(TemplateView):
         return context
 
     def form_validation(self, request, current_form, send_mail_method):
-        error_message = "Невірно введені дані, повідомлення не надіслалося! " \
-                        "Натисніть щоб закрити повідомлення!"
+        error_message = (
+            "Невірно введені дані, повідомлення не надіслалося! "
+            "Натисніть щоб закрити повідомлення!"
+        )
         if current_form.is_valid():
             try:
                 send_mail_method(form_data=current_form.cleaned_data)
                 return HttpResponseRedirect(self.redirect_url)
             except Exception as e:
-                error_message = "Помилка серверу, повідомлення не відправлене! " \
-                                "Натисніть щоб закрити повідомлення!"
+                error_message = (
+                    "Помилка серверу, повідомлення не відправлене! "
+                    "Натисніть щоб закрити повідомлення!"
+                )
         return render(
             request,
             self.template_name,
             {
-                "contact_form": current_form if "contact_form" in request.POST else self.contact_form_class(),
-                "feedback_form": current_form if "feedback_form" in request.POST else self.feedback_form_class(),
+                "contact_form": current_form
+                if "contact_form" in request.POST
+                else self.contact_form_class(),
+                "feedback_form": current_form
+                if "feedback_form" in request.POST
+                else self.feedback_form_class(),
                 "errors": error_message,
             },
         )
@@ -169,3 +177,9 @@ class AboutUsView(BaseContactFormView):
 
     template_name = "pages/about-us.html"
     success_url = reverse_lazy("about")
+
+
+class SiteMapView(TemplateView):
+    """ Sitemap """
+    template_name = "pages/sitemap.xml"
+    content_type = "application/xml"
