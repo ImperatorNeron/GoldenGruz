@@ -11,14 +11,14 @@ Golden Gruz
 <link rel="stylesheet" href="{% static 'pages/css/introduction.css' %}">
 <link rel="stylesheet" href="{% static 'pages/css/semi-trailers-attention.css' %}">
 <link rel="stylesheet" href="{% static 'pages/css/index-collage.css' %}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 {% endblock %}
 {% block main %}
 <div class="collage">
     <div class="swiper swiper-1">
         <div class="swiper-wrapper">
             <div class="swiper-slide blur-copy">
-                <img src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.JPG' %}">
+                <img src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.webp' %}">
                 <div class="item">
                     <div class="title">Напівпричепи-зерновози</div>
                     <div class="text">Виготовлення та продаж стандартних та індивідуально розроблених моделей з
@@ -28,7 +28,7 @@ Golden Gruz
                 </div>
             </div>
             <div class="swiper-slide blur-copy">
-                <img src="{% static 'pages/images/photos/banners/repair.JPG' %}">
+                <img loading="lazy" src="{% static 'pages/images/photos/banners/repair.webp' %}">
                 <div class="item">
                     <div class="title">Обслуговування</div>
                     <div class="text">Надання послуг з обслуговування, ремонту та встановлення гідравлічних
@@ -38,7 +38,7 @@ Golden Gruz
                 </div>
             </div>
             <div class="swiper-slide blur-copy">
-                <img src="{% static 'pages/images/photos/banners/tanker.jpg' %}">
+                <img loading="lazy" src="{% static 'pages/images/photos/banners/tanker.webp' %}">
                 <div class="item">
                     <div class="title">Перевезення</div>
                     <div class="text">Перевезення наливних та небезпечних вантажів усіх видів, у тому числі ADR.
@@ -47,7 +47,7 @@ Golden Gruz
                 </div>
             </div>
             <div class="swiper-slide blur-copy">
-                <img src="{% static 'pages/images/photos/banners/fuel_car.jpg' %}">
+                <img loading="lazy" src="{% static 'pages/images/photos/banners/fuel_car.webp' %}">
                 <div class="item">
                     <div class="title">Продаж палива</div>
                     <div class="text">Оптовий продаж якісного палива за привабливими цінами від виробника з ЄС.
@@ -60,10 +60,14 @@ Golden Gruz
     </div>
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.JPG' %}"></div>
-            <div class="swiper-slide"><img src="{% static 'pages/images/photos/banners/repair.JPG' %}"></div>
-            <div class="swiper-slide"><img src="{% static 'pages/images/photos/banners/tanker.jpg' %}"></div>
-            <div class="swiper-slide"><img src="{% static 'pages/images/photos/banners/fuel_car.jpg' %}"></div>
+            <div class="swiper-slide"><img
+                    src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.webp' %}"></div>
+            <div class="swiper-slide"><img loading="lazy" src="{% static 'pages/images/photos/banners/repair.webp' %}">
+            </div>
+            <div class="swiper-slide"><img loading="lazy" src="{% static 'pages/images/photos/banners/tanker.webp' %}">
+            </div>
+            <div class="swiper-slide"><img loading="lazy"
+                                           src="{% static 'pages/images/photos/banners/fuel_car.webp' %}"></div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
@@ -84,27 +88,27 @@ Golden Gruz
     <div class="our-advantages-title">Наші переваги:</div>
     <div class="advantages">
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/high-quality.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/high-quality.png' %}" alt="" height="70" width="70">
             <div class="text">Висока якість напівпричепів-зерновозів власного виробництва</div>
         </div>
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/support.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/support.png' %}" alt="" height="70" width="70">
             <div class="text">Консультування та підтримка клієнтів</div>
         </div>
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/multiple.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/multiple.png' %}" alt="" height="70" width="70">
             <div class="text">Великий вибір напівпричепів власного виробництва</div>
         </div>
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/sketch.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/sketch.png' %}" alt="" height="70" width="70">
             <div class="text">Виготовлення напівпричепів під індивідуальне замовлення</div>
         </div>
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/wrench.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/wrench.png' %}" alt="" height="70" width="70">
             <div class="text">Професійне та високотехнологічне обслуговування</div>
         </div>
         <div class="advantage">
-            <img src="{% static 'pages/images/icons/best-price.png' %}" alt="" height="70" width="70">
+            <img loading="lazy" src="{% static 'pages/images/icons/best-price.png' %}" alt="" height="70" width="70">
             <div class="text">Приємні ціни</div>
         </div>
     </div>
@@ -119,7 +123,7 @@ Golden Gruz
         <div class="semi-trailer-block-1">
             <div class="title">
                 <div class="img-wrapper">
-                    <img src="{% static 'pages/images/icons/semi-trailer.png' %}" height="35" width="35">
+                    <img loading="lazy" src="{% static 'pages/images/icons/semi-trailer.png' %}" height="35" width="35">
                 </div>
                 <div class="text">Про обслуговування</div>
             </div>
@@ -129,16 +133,16 @@ Golden Gruz
                 сталей. Всі
                 зварні роботи виконуються промисловими напівавтоматами в середовищі захисних газів.
             </div>
-            <img class="middle-img"
-                 src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.JPG' %}">
+            <img class="middle-img" loading="lazy"
+                 src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.webp' %}">
             <div class="text">Крім того, GOLDEN GRUZ встановлює гідравлічні циліндри відомих брендів, ходову
                 частину
                 напівпричепа-причепа (осі), пневматику, електрику, допоміжні механізми для підйому осей,
                 автоматичні
                 замки воріт, люки для вивантаження зерна та обігрів кузова.
             </div>
-            <img class="middle-img"
-                 src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_2.jpg' %}">
+            <img class="middle-img" loading="lazy"
+                 src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_2.webp' %}">
             <div class="text">Компанія також пропонує виготовлення кузовів на замовлення на шасі клієнта.
                 Зверніться до
                 GOLDEN GRUZ для отримання професійних послуг з виготовлення транспортних засобів, що
@@ -177,8 +181,8 @@ Golden Gruz
             <a href="{% url 'leasing' %}" class="leasing-button">Відправити заявку</a>
         </div>
     </div>
-    <img src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.JPG' %}" alt="" class="photo"
-         height="400" width="400">
+    <img src="{% static 'pages/images/photos/semi_trailers_and_trucks/semi_trailer_1.webp' %}" alt="" class="photo"
+         height="400" width="400" loading="lazy">
 </div>
 <div class="introduction">
     <div class="title">Доставка небезпечних вантажів та оптовий продаж палива</div>
@@ -197,18 +201,21 @@ Golden Gruz
     <div class="custom-cards">
         <a class="custom-card" href="{% url 'danger' %}">
             <div class="custom-card-img-wrapper">
-                <img class="custom-card-img" src="{% static 'pages/images/photos/banners/danger.jpg' %}" alt="">
+                <img loading="lazy" class="custom-card-img" src="{% static 'pages/images/photos/banners/danger.webp' %}"
+                     alt="">
                 <div class="overlay">
-                    <img src="{% static 'pages/images/icons/test.png' %}" class="icon" alt="" width="60">
+                    <img loading="lazy" src="{% static 'pages/images/icons/test.png' %}" class="icon" alt="" width="60">
                     <div>Доставка небезпечних вантажів по Україні та Європі</div>
                 </div>
             </div>
         </a>
         <a class="custom-card" href="{% url 'fuel' %}">
             <div class="custom-card-img-wrapper">
-                <img class="custom-card-img" src="{% static 'pages/images/photos/banners/fuel.jpg' %}" alt="">
+                <img loading="lazy" class="custom-card-img" src="{% static 'pages/images/photos/banners/fuel.webp' %}"
+                     alt="">
                 <div class="overlay">
-                    <img src="{% static 'pages/images/icons/petrol-station.png' %}" class="icon" alt="" width="60">
+                    <img loading="lazy" src="{% static 'pages/images/icons/petrol-station.png' %}" class="icon" alt=""
+                         width="60">
                     <div>Оптовий продаж палива</div>
                 </div>
             </div>

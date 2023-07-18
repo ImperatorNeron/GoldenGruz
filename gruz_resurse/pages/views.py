@@ -180,6 +180,7 @@ class AboutUsView(BaseContactFormView):
 
 
 class SiteMapView(TemplateView):
-    """ Sitemap """
+    """Sitemap"""
+
     template_name = "pages/sitemap.xml"
     content_type = "application/xml"
